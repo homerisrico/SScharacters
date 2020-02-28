@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title',$datos->nombre)
 @section('content')
   
     <input type="hidden" value="{{$a = 1}}">
