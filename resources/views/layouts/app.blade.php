@@ -51,9 +51,12 @@
                             Menu
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/saint/create">Create</a>
-                            <a class="dropdown-item" href="/saint">Index</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="/saint/create">Create Saint</a>
+                            <a class="dropdown-item" href="/saint">Index</a>                                                       
+                            <!-- Button trigger modal -->
+                            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer;">
+                                Create Clase
+                            </a>
                         </div>
                     </div>
                     @endif
@@ -101,3 +104,8 @@
     <script src="{{ asset('js/imagenes.js') }}" defer></script>  
 </body>
 </html>
+
+
+@include('clase.modal')
+
+

@@ -2,7 +2,7 @@
 @section('title',$datos->nombre)
 @section('content')
   
-    <input type="hidden" value="{{$a = 1}}">
+    
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -11,8 +11,8 @@
                       <!-- Carga carrusel -->
                          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    @foreach($imagenes as $imagen)                                       
-                                        @if($a == 1)
+                                    @foreach($imagenes as $clave => $imagen)                                        
+                                        @if($clave == 0)
                                         <div class="carousel-item active">
                                          <img src="/image/carrusel/{{$imagen->ruta}}" width="200rem" height="300rem"  class="d-block w-100" alt="...">
                                          </div> 
@@ -20,8 +20,7 @@
                                          <div class="carousel-item">
                                          <img src="/image/carrusel/{{$imagen->ruta}}" width="200rem" height="300rem"  class="d-block w-100" alt="...">
                                          </div>   
-                                        @endif
-                                        <input type="hidden" value="{{$a++}}">  
+                                        @endif                                        
                                     @endforeach                            
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
