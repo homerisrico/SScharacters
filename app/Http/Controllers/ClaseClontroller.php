@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Clase;
 
 class ClaseClontroller extends Controller
 {
@@ -13,7 +14,8 @@ class ClaseClontroller extends Controller
      */
     public function index()
     {
-        //
+        $datos = Clase::all();
+        return response()->json($datos);
     }
 
     /**
@@ -34,7 +36,18 @@ class ClaseClontroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $datos = new Clase();
+        $datos->nombre = $request->nombre;
+
+        if($datos->save()){
+            $mensaje = 'se agrego '.$request->nombre.' correcta mente';
+        }
+        else{
+            $mensaje = 'ocurrio un error a agregar '.$request->nombre;
+        }
+
+        return $mensaje;
     }
 
     /**

@@ -30,3 +30,5 @@ Route::get('/saintdelete/{id}','ImagenController@destroy')->name('delete');
 //Route::get('/saint','SSCharacters@index')->name('index');
 
 Route::get('/sesion/{form}','SesionController@formu');
+
+Route::resource('/clase','ClaseClontroller');

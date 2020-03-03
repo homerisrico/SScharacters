@@ -54,7 +54,7 @@
                             <a class="dropdown-item" href="/saint/create">Create Saint</a>
                             <a class="dropdown-item" href="/saint">Index</a>                                                       
                             <!-- Button trigger modal -->
-                            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" style="cursor:pointer;">
+                            <a class="dropdown-item" id="modalClaseId" data-toggle="modal" data-target="#modalClase" style="cursor:pointer;">
                                 Create Clase
                             </a>
                         </div>
